@@ -1,0 +1,29 @@
+Title: Determine Eligibility for Exam Based on Attendance Percentage.
+Algorithm:
+•  Start
+•  Input Collection:
+•	Read the number of classes attended and store it in a variable.
+•	Read the total number of classes and store it in another variable.
+•  Validation:
+•	Check if the total number of classes is zero.
+o	If it is, display an error message "Total classes cannot be zero." and stop further processing.
+•  Calculation:
+Calculate the attendance percentage using the formula:
+                   
+•	Decision Making:
+Compare the calculated attendance percentage with the minimum required percentage (75%).
+o	If the attendance percentage is greater than or equal to 75%, display a message indicating that the student is eligible for the exam, along with the calculated percentage.
+o	Otherwise, display a message indicating that the student is not eligible for the exam, along with the calculated percentage and the minimum required attendance.
+•	End
+Code:
+attended = int(input("Enter number of classes attended: "))
+total = int(input("Enter total number of classes: "))
+
+if total == 0:
+    print("Total classes cannot be zero.")
+else:
+    attendance_percentage = (attended / total) * 100
+    if attendance_percentage >= 75:
+        print(f"Eligible for Exam. Attendance: {attendance_percentage:.2f}%")
+    else:
+        print(f"Not Eligible for Exam. Attendance: {attendance_percentage:.2f}% (Minimum Required: 75%)")
